@@ -70,6 +70,7 @@ const Menu: React.FC<MenuProps> = (props: Extendable) => {
         />
       )}
       <MenuItem to="/dapps" icon={<IconGrid />} alt="dapps" />
+      <MenuItem to="/wormhole" icon={<IconGrid />} alt="wormhole" />
       <MenuItem
         to="/transaction/flow"
         icon={<IconHistory />}

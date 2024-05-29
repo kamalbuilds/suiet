@@ -16,6 +16,7 @@ const NFTSendPage = lazy(async () => await import('../pages/NFTPage/NftSend'));
 const WelcomePage = lazy(
   async () => await import('../pages/onboarding/WelcomePage')
 );
+const WormholePage = lazy(async () => import('../pages/WormholePage'));
 const SettingPage = lazy(async () => await import('../pages/SettingsPage'));
 const SettingWalletPage = lazy(
   async () => await import('../pages/SettingsPage/wallet')
@@ -26,7 +27,7 @@ const SettingNetworkPage = lazy(
 const SettingSecurityPage = lazy(
   async () => await import('../pages/SettingsPage/security')
 );
-const SendPage = lazy(async () => await import('../pages/SendPage'));
+const SendPage = lazy(async () => await import('../pages/WormholePage'));
 const StakingPage = lazy(async () => await import('../pages/StakingPage'));
 const TxHistoryPage = lazy(
   async () => await import('../pages/txn/TxHistoryPage')
@@ -101,6 +102,10 @@ const routesConfig: RouteObject[] = [
       {
         path: 'coin/detail/:coinType',
         element: withSus(<CoinDetailPage />),
+      },
+      {
+        path: 'wormhole',
+        element: withSus(<WormholePage />),
       },
       {
         path: 'dapps',
